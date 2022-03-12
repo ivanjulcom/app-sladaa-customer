@@ -118,7 +118,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
-                            android:hint="85383xxxxxx"
+                            android:hint="85383123456"
                             android:inputType="phone"
                             android:padding="10dp"
                             android:textColor="@color/black" />
@@ -154,7 +154,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@null"
-                            android:hint="85383xxxxxx atau xxx@gmail.com"
+                            android:hint="Masukan email"
 
                             android:padding="10dp"
                             android:textColor="@color/black" />

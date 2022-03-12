@@ -73,7 +73,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
         Glide.with(mContext).load(APIClient.baseUrl + "/" + category.getCatimg()).thumbnail(Glide.with(mContext).load(R.drawable.ezgifresize)).into(holder.thumbnail);
         holder.lvlclick.setOnClickListener(v -> {
             if (category.getCount() == 0) {
-                Toast.makeText(mContext, "Product Not Found !!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, "Produk tidak ditemukan !", Toast.LENGTH_SHORT).show();
             } else {
                 listener.onClickCategoryItem(category.getCatname(), position);
             }

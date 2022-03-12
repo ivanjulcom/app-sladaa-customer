@@ -59,6 +59,7 @@ import okhttp3.RequestBody;
 import retrofit2.Call;
 
 import static com.sladaa.supermarket.utiles.SessionManager.address;
+import static com.sladaa.supermarket.utiles.SessionManager.change;
 import static com.sladaa.supermarket.utiles.SessionManager.coupon;
 import static com.sladaa.supermarket.utiles.SessionManager.couponid;
 import static com.sladaa.supermarket.utiles.SessionManager.currency;
@@ -66,6 +67,7 @@ import static com.sladaa.supermarket.utiles.SessionManager.dcharge;
 import static com.sladaa.supermarket.utiles.SessionManager.itemlimit;
 import static com.sladaa.supermarket.utiles.SessionManager.minmumorder;
 import static com.sladaa.supermarket.utiles.SessionManager.pincode;
+import static com.sladaa.supermarket.utiles.SessionManager.type;
 import static com.sladaa.supermarket.utiles.SessionManager.wallet;
 import static com.sladaa.supermarket.utiles.Utility.ISORDER;
 import static com.sladaa.supermarket.utiles.Utility.changeAddress;
@@ -544,6 +546,7 @@ public class CartActivity extends RootActivity implements GetResult.MyListener {
                 updateItem();
                 break;
             case R.id.txt_changeadress:
+                sessionManager.setStringData(change, "change");
                 startActivity(new Intent(CartActivity.this, AddressActivity.class));
                 break;
             case R.id.btn_proceed:

@@ -3,6 +3,7 @@ package com.sladaa.supermarket.ui;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -44,6 +45,7 @@ import static com.sladaa.supermarket.ui.SearchActivity.searchCategory;
 import static com.sladaa.supermarket.utiles.SessionManager.pincoded;
 import static com.sladaa.supermarket.utiles.SessionManager.storeid;
 import static com.sladaa.supermarket.utiles.SessionManager.storename;
+import static com.sladaa.supermarket.utiles.SessionManager.type;
 
 public class HomeActivity extends RootActivity implements GetResult.MyListener {
 
@@ -91,9 +93,13 @@ public class HomeActivity extends RootActivity implements GetResult.MyListener {
             openFragment(new HomeFragment());
             updateItem();
         }
+        if(TextUtils.isEmpty(sessionManager.getStringData(type))){
+            startActivity(new Intent(HomeActivity.this, AddressActivity.class));
+        }
     }
 
     public void updateItem() {
+
         Cursor res = helper.getAllData();
         if (res.getCount() == 0) {
             txtCountcard.setText("0");
@@ -281,6 +287,7 @@ public class HomeActivity extends RootActivity implements GetResult.MyListener {
 
     @Override
     public void callback(JsonObject result, String callNo) {
+        custPrograssbar.closePrograssBar();
         try {
             custPrograssbar.closePrograssBar();
             if (callNo.equalsIgnoreCase("2")) {

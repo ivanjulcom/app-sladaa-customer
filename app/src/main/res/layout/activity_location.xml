@@ -89,7 +89,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="No. rumah / Blok" />
+                    android:text="No. Rumah / Blok" />
 
                 <EditText
                     android:id="@+id/ed_hoseno"
@@ -113,7 +113,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Penunjuk" />
+                    android:text="Landmark" />
 
                 <EditText
                     android:id="@+id/ed_landmark"

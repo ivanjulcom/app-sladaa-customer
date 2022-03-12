@@ -51,7 +51,7 @@
                         android:layout_weight="1"
                         android:gravity="center|left"
                         android:padding="1dp"
-                        android:text="Pesanan"
+                        android:text="Pesanan Saya"
                         android:textColor="@color/white"
                         android:textSize="18dp"
                         android:textStyle="bold" />

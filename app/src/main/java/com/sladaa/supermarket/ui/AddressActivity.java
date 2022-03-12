@@ -3,9 +3,12 @@ package com.sladaa.supermarket.ui;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,8 +54,10 @@ import okhttp3.MediaType;
 import okhttp3.RequestBody;
 import retrofit2.Call;
 
+import static com.sladaa.supermarket.utiles.SessionManager.change;
 import static com.sladaa.supermarket.utiles.SessionManager.pincode;
 import static com.sladaa.supermarket.utiles.SessionManager.pincoded;
+import static com.sladaa.supermarket.utiles.SessionManager.type;
 
 public class AddressActivity extends RootActivity implements GetResult.MyListener {
 
@@ -71,6 +76,8 @@ public class AddressActivity extends RootActivity implements GetResult.MyListene
     ImageView imgBack;
     @BindView(R.id.txt_actiontitle)
     TextView txtActionTitle;
+    @BindView(R.id.note_choose_location)
+    TextView note_choose_location;
     @BindView(R.id.appBarLayout)
     AppBarLayout appBarLayout;
 
@@ -118,7 +125,13 @@ public class AddressActivity extends RootActivity implements GetResult.MyListene
             lilCollation.setVisibility(View.GONE);
 
         }
+        if(TextUtils.isEmpty(sessionManager.getStringData(type))){
+            note_choose_location.setVisibility(View.VISIBLE);
+        }else {
+            note_choose_location.setVisibility(View.GONE);
+        }
         getAddress();
+
     }
 
     private void getAddress() {
@@ -234,9 +247,17 @@ public class AddressActivity extends RootActivity implements GetResult.MyListene
         @Override
         public void onBindViewHolder(@NonNull BannerHolder holder, int position) {
 
+
+
+            Log.d("MYINT", "value: " + sessionManager.getStringData(type));
+            Log.d("MYINT", "value333: " + mBanner.get(position).getType());
             holder.txtType.setText("" + mBanner.get(position).getType());
             holder.txtHomeaddress.setText(mBanner.get(position).getHno() + mBanner.get(position).getLandmark() + "," + mBanner.get(position).getAddress());
-            Glide.with(context).load(APIClient.baseUrl + "/" + mBanner.get(position).getAddressImage()).thumbnail(Glide.with(context).load(R.drawable.ezgifresize)).centerCrop().into(holder.imgBanner);
+            //Glide.with(context).load(APIClient.baseUrl + "/" + mBanner.get(position).getAddressImage()).thumbnail(Glide.with(context).load(R.drawable.ezgifresize)).centerCrop().into(holder.imgBanner);
+            if(sessionManager.getStringData(type).equals(mBanner.get(position).getType())){
+                holder.txtType.setTextColor(Color.parseColor("#04BC81"));
+                holder.txtHomeaddress.setTextColor(Color.parseColor("#04BC81"));
+            }
             holder.lvlHome.setOnClickListener(v -> {
 
             });
@@ -250,8 +271,12 @@ public class AddressActivity extends RootActivity implements GetResult.MyListene
                             sessionManager.setIntData("position", position);
                             sessionManager.setStringData(pincode, mBanner.get(position).getPincodeId());
                             sessionManager.setStringData(pincoded, mBanner.get(position).getAddress());
-                            //startActivity(new Intent(AddressActivity.this, HomeActivity.class));
-                            finish();
+                            sessionManager.setStringData(type, mBanner.get(position).getType());
+                            if(sessionManager.getStringData(change).equals("change")){
+                                finish();
+                            }else {
+                                startActivity(new Intent(AddressActivity.this, StoreActivity.class));
+                            }
                             break;
                         case R.id.menu_edit:
                             startActivity(new Intent(AddressActivity.this, LocationGetActivity.class)

@@ -81,7 +81,7 @@ public class StoreActivity extends RootActivity implements GetResult.MyListener 
         user = sessionManager.getUserDetails("");
         gridLayoutManager = new StaggeredGridLayoutManager(1, 1);
         myRecyclerView.setLayoutManager(gridLayoutManager);
-        txtLocation.setText("Dikirim ke " + sessionManager.getStringData(pincoded));
+        txtLocation.setText("Kirim ke " + sessionManager.getStringData(pincoded));
         getStore();
     }
 
@@ -164,7 +164,7 @@ public class StoreActivity extends RootActivity implements GetResult.MyListener 
                 } else {
                     myRecyclerView.setVisibility(View.GONE);
                     lvlNotfound.setVisibility(View.VISIBLE);
-                    txtNotFount.setText("Your orders will be displayed hear.");
+                    txtNotFount.setText("Pesanan Anda akan ditampilkan disini!");
                 }
                 edSearch.addTextChangedListener(new TextWatcher() {
 

@@ -27,6 +27,8 @@ public class SessionManager {
     public static String couponid = "couponid";
     public static String storename = "storename";
     public static String storeid = "storeid";
+    public static String type = "type";
+    public static String change = "change";
 
 
     public static String terms = "terms";

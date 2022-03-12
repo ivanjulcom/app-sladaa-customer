@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.sladaa.supermarket.R;
 import com.sladaa.supermarket.locationpick.LocationGetActivity;
@@ -113,6 +114,9 @@ public class ProfileActivity extends RootActivity implements GetResult.MyListene
             if (callNo.equalsIgnoreCase("1")) {
                 Gson gson = new Gson();
                 Login login = gson.fromJson(result.toString(), Login.class);
+                if(login.getResult()=="false"){
+                    Toast.makeText(ProfileActivity.this, login.getResponseMsg(),Toast.LENGTH_SHORT).show();
+                }
                 OneSignal.sendTag("userid", login.getUserLogin().getId());
                 sessionManager.setUserDetails("", login.getUserLogin());
                 sessionManager.setBooleanData(SessionManager.login, true);

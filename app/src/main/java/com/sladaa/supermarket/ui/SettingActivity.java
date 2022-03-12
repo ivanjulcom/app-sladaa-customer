@@ -17,6 +17,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import static com.sladaa.supermarket.utiles.SessionManager.change;
 import static com.sladaa.supermarket.utiles.SessionManager.sgen;
 
 public class SettingActivity extends RootActivity {
@@ -72,7 +73,7 @@ public class SettingActivity extends RootActivity {
         } else {
             lvlGenieorder.setVisibility(View.GONE);
         }
-
+        sessionManager.setStringData(change, "not_change");
     }
 
     @OnClick({R.id.lvl_shareapp, R.id.lvl_faq, R.id.lvl_refer, R.id.lvl_wallet, R.id.lvl_order, R.id.lvl_genieorder, R.id.lvl_address, R.id.lvl_about, R.id.lvl_contect, R.id.lvl_privacy, R.id.lvl_teams, R.id.lvl_logot, R.id.lvl_edit})

@@ -50,7 +50,7 @@
                         android:layout_weight="1"
                         android:gravity="center|left"
                         android:padding="1dp"
-                        android:text="Lokasi Pengiriman"
+                        android:text="Pilih Lokasi Pengiriman"
                         android:textColor="@color/white"
                         android:textSize="18dp"
                         android:textStyle="bold" />
@@ -163,6 +163,7 @@
                     android:layout_height="wrap_content"
                     android:text="Gunakan GPS" />
 
+
             </LinearLayout>
 
             <ImageView
@@ -198,12 +199,15 @@
                 android:layout_height="wrap_content"
                 android:scrollbars="vertical" />
 
+            <TextView
+                android:id="@+id/note_choose_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/quantum_error_dark"
+                android:text="Warning : mohon pilih lokasi pengiriman terlebih dahulu dimenu sebelah kanan." />
+
         </LinearLayout>
     </LinearLayout>
-    <TextView
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Setelah mengisi lokasi pengiriman mohon pilih alamat dimenu titik tiga samping kanan." />
 </LinearLayout>

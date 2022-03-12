@@ -14,7 +14,7 @@ public class CustPrograssbar {
                 Log.e("Error","Show!");
             } else {
                 progressDialog = new ProgressDialog(context);
-                progressDialog.setMessage("Progress...");
+                progressDialog.setMessage("Mohon tunggu...");
                 progressDialog.show();
             }
 

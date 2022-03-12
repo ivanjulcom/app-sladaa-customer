@@ -2,18 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/ic_homes2"
 
         android:title="Home" />
 
     <item
         android:id="@+id/navigation_sreach"
-        android:icon="@drawable/ic_search_bottom"
+        android:icon="@drawable/ic_searchs2"
         android:enabled="true"
         android:title="Cari" />
     <item
         android:id="@+id/navigation_medicine"
-        android:icon="@drawable/ic_category"
+        android:icon="@drawable/ic_categorys2"
         android:enabled="true"
         android:title="Kategori" />
 
@@ -22,12 +22,12 @@
     <item
         android:id="@+id/navigation_notifications"
         android:enabled="true"
-        android:icon="@drawable/ic_notification"
+        android:icon="@drawable/ic_notifications2"
         android:title="Notifikasi" />
     <item
         android:enabled="true"
         android:id="@+id/navigation_setting"
-        android:icon="@drawable/ic_setting"
+        android:icon="@drawable/ic_accounts2"
         android:title="Akun" />
 
 

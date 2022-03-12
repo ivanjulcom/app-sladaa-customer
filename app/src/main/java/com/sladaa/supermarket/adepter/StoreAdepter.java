@@ -1,6 +1,7 @@
 package com.sladaa.supermarket.adepter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,7 @@ import com.bumptech.glide.Glide;
 import com.sladaa.supermarket.R;
 import com.sladaa.supermarket.model.StoreDataItem;
 import com.sladaa.supermarket.retrofit.APIClient;
+import com.sladaa.supermarket.ui.HomeActivity;
 import com.sladaa.supermarket.ui.StoreActivity;
 import com.sladaa.supermarket.utiles.DatabaseHelper;
 import com.sladaa.supermarket.utiles.SessionManager;
@@ -70,7 +72,7 @@ public class StoreAdepter extends RecyclerView.Adapter<StoreAdepter.ViewHolder> 
             @Override
             public void onClick(View view) {
                 if (Integer.parseInt(history.getTotalitem()) == 0) {
-                    Toast.makeText(mContext, "Currently Product Not Available !!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "Produk tidak tersedia !!", Toast.LENGTH_SHORT).show();
                 } else {
                     Cursor res = helper.getAllData();
                     if (res.getCount() !=0 && !sessionManager.getStringData(storeid).equalsIgnoreCase(history.getId())) {
@@ -79,6 +81,8 @@ public class StoreAdepter extends RecyclerView.Adapter<StoreAdepter.ViewHolder> 
                         StoreActivity.getInstance().changeStore = true;
                         sessionManager.setStringData(storeid, history.getId());
                         sessionManager.setStringData(storename, history.getTitle());
+                        Intent intent= new Intent(mContext, HomeActivity.class);
+                        mContext.startActivity(intent);
                         StoreActivity.getInstance().finish();
                     }
 

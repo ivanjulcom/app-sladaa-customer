@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class APIClient {
     static Retrofit retrofit = null;
 
-    public static String baseUrl = "http://192.168.1.98/";
+    public static String baseUrl = "http://192.168.1.14/";
     
     public static final String APPEND_URL = "/sladaa/capi/";
     public static UserService getInterface() {
