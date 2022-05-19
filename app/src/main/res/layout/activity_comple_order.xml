@@ -50,7 +50,7 @@
                         android:layout_weight="1"
                         android:gravity="center|left"
                         android:padding="1dp"
-                        android:text="Pilihan Pembayaran"
+                        android:text="Pesanan Diterima"
                         android:textColor="@color/white"
                         android:textSize="18dp"
                         android:textStyle="bold" />
@@ -87,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Pesanan Anda telah berhasil dibuat\n dan akan segera dikirim."
+                android:text="Pesanan Anda telah berhasil dibuat\n dan akan segera dikirim"
                 android:textColor="@color/black"
                 android:textSize="16dp"
                 android:textStyle="bold" />

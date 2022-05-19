@@ -41,7 +41,7 @@
                 android:gravity="center"
                 android:padding="5dp"
                 android:fontFamily="@font/gilroybold"
-                android:text="Discover the foods &amp; groceries  from over 1000+ stores."
+                android:text="Lebih dari 10+ toko sladaa tersebar untuk memenuhi kebutuhan dapur Anda"
                 android:textSize="16dp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="Search for favorite food near you"
+                android:text="Cari toko sladaa didekat Anda"
                 android:fontFamily="@font/gilroybold"
                 android:textColor="@color/white"
                 android:textSize="20dp"

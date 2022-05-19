@@ -20,7 +20,7 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 -repackageclasses
--keep class com.sladaa.supermarket.model** { *; }
+-keep class com.sladaa.customer.model** { *; }
 -keep,allowshrinking,allowobfuscation enum com.sladaa.**
 -optimizations !class/unboxing/enum
 

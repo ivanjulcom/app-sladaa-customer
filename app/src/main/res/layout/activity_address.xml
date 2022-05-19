@@ -135,7 +135,6 @@
             android:layout_marginLeft="10dp"
             android:background="?android:attr/selectableItemBackground"
             android:gravity="center|left"
-            android:visibility="gone"
             android:padding="10dp">
 
             <ImageView
@@ -175,7 +174,30 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/colorgrey" />
-
+        <LinearLayout
+            android:id="@+id/not_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/rectangle">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_about" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mohon masukan lokasi pengiriman!" />
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/lvlbottom">
         <LinearLayout
             android:id="@+id/lvl_myaddress"
             android:layout_width="match_parent"
@@ -186,12 +208,40 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="12dp"
                 android:layout_marginTop="5dp"
-                android:text="Kirim ke"
+                android:text="Diantar ke:"
                 android:textColor="@color/black"
                 android:textSize="16dp"
                 android:textStyle="bold" />
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:id="@+id/not_view"-->
+<!--                android:background="@color/colorgrey" />-->
+
+            <LinearLayout
+                android:id="@+id/not_choose_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/rectangle">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_about" />
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mohon pilih lokasi pengiriman!" />
+            </LinearLayout>
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/my_recycler_view"
@@ -199,15 +249,9 @@
                 android:layout_height="wrap_content"
                 android:scrollbars="vertical" />
 
-            <TextView
-                android:id="@+id/note_choose_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:textStyle="bold"
-                android:textColor="@color/quantum_error_dark"
-                android:text="Warning : mohon pilih lokasi pengiriman terlebih dahulu dimenu sebelah kanan." />
+
 
         </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </LinearLayout>

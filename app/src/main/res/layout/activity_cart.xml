@@ -340,6 +340,8 @@
                             android:orientation="vertical"
                             android:padding="5dp">
 
+
+
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -356,11 +358,13 @@
                                 android:layout_height="wrap_content"
                                 android:background="@null"
                                 android:gravity="top"
-                                android:hint="Masukkan informasi tambahan mengenai pesanan Anda, misal tanggal dan jam. Jika tidak ada maka maksimal pengiriman besok."
+                                android:hint="Masukkan informasi tambahan mengenai pesanan Anda"
                                 android:minHeight="100dp"
                                 android:textColorHint="@color/colorgrey"
                                 android:textSize="14dp" />
                         </LinearLayout>
+
+
 
 
                     </LinearLayout>
@@ -372,9 +376,29 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2.5"
+            android:layout_weight="2"
             android:gravity="center"
             android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/note_choose_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_times2" />
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="12dp"
+                    android:text="Estimasi waktu pengiriman : 1 jam setelah dipesan" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -434,7 +458,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp">
-
                 <TextView
                     android:id="@+id/btn_proceed"
                     android:layout_width="match_parent"

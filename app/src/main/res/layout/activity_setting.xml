@@ -63,7 +63,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="48dp"
                             android:layout_alignParentRight="true"
-                            android:layout_marginTop="-15dp"
+                            android:layout_marginTop="-10dp"
                             android:background="?android:attr/selectableItemBackgroundBorderless"
                             android:gravity="center">
 
@@ -126,13 +126,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
-                    android:src="@drawable/ic_my_orders" />
+                    android:src="@drawable/ic_order" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="10dp"
+                    android:textColor="@color/black"
                     android:text="Pesanan saya"
                     android:textStyle="bold" />
 
@@ -156,8 +157,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:padding="8dp"
                     android:src="@drawable/ic_order" />
 
@@ -177,6 +178,7 @@
             </LinearLayout>
 
             <View
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/colorgrey" />
@@ -212,6 +214,7 @@
                     android:src="@drawable/ic_right" />
             </LinearLayout>
             <View
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/colorgrey"/>
@@ -224,16 +227,17 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:padding="8dp"
-                    android:src="@drawable/ic_locations" />
+                    android:src="@drawable/ic_current_location_gps" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="10dp"
+                    android:textColor="@color/black"
                     android:text="Alamat saya"
                     android:textStyle="bold" />
 
@@ -259,8 +263,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:padding="8dp"
                     android:src="@drawable/ic_about" />
 
@@ -270,6 +274,7 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:text="Tentang"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -293,17 +298,18 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:padding="8dp"
-                    android:src="@drawable/ic_contact_phones2" />
+                    android:src="@drawable/ic_faq" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="10dp"
-                    android:text="Kontak"
+                    android:text="Bantuan"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -347,6 +353,7 @@
                     android:src="@drawable/ic_right" />
             </LinearLayout>
             <View
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/colorgrey" />
@@ -359,8 +366,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:padding="8dp"
                     android:src="@drawable/ic_privacy_policy" />
 
@@ -370,6 +377,7 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:text="Privacy Policy"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -380,10 +388,12 @@
             </LinearLayout>
 
             <View
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/colorgrey" />
             <LinearLayout
+                android:visibility="gone"
                 android:id="@+id/lvl_faq"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -403,6 +413,7 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:text="FAQ"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -425,8 +436,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:padding="8dp"
                     android:src="@drawable/ic_share" />
 
@@ -436,6 +447,7 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:text="Bagikan Aplikasi"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -458,8 +470,8 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
                     android:padding="8dp"
                     android:src="@drawable/ic_terms_condition" />
 
@@ -469,6 +481,7 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:text="Terms &amp; Condition"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -517,6 +530,7 @@
         android:layout_width="match_parent"
         android:layout_height="85dp"
         android:gravity="center"
+        android:visibility="gone"
         android:orientation="vertical">
 
         <TextView

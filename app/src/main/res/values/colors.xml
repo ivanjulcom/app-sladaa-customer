@@ -10,6 +10,7 @@
     <color name="yello">#FFC107</color>
     <color name="colorgrey1">#F4F3F3</color>
     <color name="colorgrey">#CFCFCF</color>
+    <color name="colorgreywhite">#F8F7F7</color>
     <color name="colorred">#FF6F6F</color>
     <color name="tranfarnt">#00D32A1E</color>
 </resources>

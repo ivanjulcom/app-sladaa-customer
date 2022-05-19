@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="15dp"
-                android:text="Produl tidak ditemukan"
+                android:text="Produk tidak ditemukan"
                 android:textSize="21dp"
                 android:textStyle="bold" />
         </LinearLayout>

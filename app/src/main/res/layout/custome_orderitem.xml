@@ -100,11 +100,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/rounded_buttonred"
+            android:background="@drawable/border"
             android:gravity="center"
             android:padding="7dp"
             android:text="Batal"
-            android:textColor="@color/white"
             android:textStyle="bold" />
 
         <View
@@ -116,11 +115,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/rounded_button"
+            android:background="@drawable/border"
             android:gravity="center"
             android:padding="7dp"
             android:text="Info"
-            android:textColor="@color/white"
             android:textStyle="bold" />
 
     </LinearLayout>

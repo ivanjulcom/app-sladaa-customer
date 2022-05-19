@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="130dp"
             android:layout_gravity="center"
-            android:layout_margin="8dp"
+            android:layout_margin="3dp"
             app1:cardCornerRadius="8dp"
             app1:cardElevation="2dp">
 
@@ -34,7 +34,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_gravity="center|top"
-                    android:padding="5dp"
+                    android:padding="3dp"
                     android:scaleType="fitXY" />
 
                 <TextView
@@ -43,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:padding="5dp"
+                    android:padding="3dp"
                     android:singleLine="true"
                     android:text="asdasdasd"
                     android:textSize="12dp" />

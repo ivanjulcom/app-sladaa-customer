@@ -41,7 +41,7 @@
                 android:gravity="center"
                 android:fontFamily="@font/gilroybold"
                 android:padding="5dp"
-                android:text="Satisfies your food cravings with your favorite food delivered to you, wherever you are"
+                android:text="Tidak perlu repot keluar rumah ya bun, sayuran segar akan segera dikirimkan"
                 android:textSize="16dp"
                 />
         </LinearLayout>
@@ -58,9 +58,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="Browse the largest variety
-of food, groceries, drink
-and more"
+                android:text="Jelajahi berbagai jenis kebutuhan dapur Anda di Sladaa"
                 android:fontFamily="@font/gilroybold"
                 android:textColor="@color/white"
                 android:textSize="20dp"
