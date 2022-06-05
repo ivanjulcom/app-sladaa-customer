@@ -239,7 +239,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Mohon pilih lokasi pengiriman!" />
+                    android:text="Mohon pilih lokasi pengiriman dititik tiga!" />
             </LinearLayout>
 
 

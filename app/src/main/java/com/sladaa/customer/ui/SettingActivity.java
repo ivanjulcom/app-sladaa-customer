@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.sladaa.customer.BuildConfig;
 import com.sladaa.customer.R;
 import com.sladaa.customer.model.User;
@@ -59,7 +60,7 @@ public class SettingActivity extends RootActivity {
         txtfirstl.setText("" + first);
         txtName.setText("" + user.getFname());
         txtMob.setText("0" + user.getMobile());
-        String sourceString = "Design Develop by <b>" + "ivanjulcom" + "</b> ";
+        String sourceString = "2022 Sladaa. All rights reserved";
         txtCopyr.setText(Html.fromHtml(sourceString));
 
         if (!sessionManager.getBooleanData(SessionManager.login)) {
